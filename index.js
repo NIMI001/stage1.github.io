@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const now = new Date();
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const currentDate = `${days[now.getDay()]}, ${now.toLocaleDateString()}`;
-        const currentTime = now.toLocaleTimeString();
+        const currentTime = now.toUTCString().split(' ')[4];
 
         document.getElementById('currentTimeUTC').textContent = `Time: ${currentTime}`;
         document.getElementById('currentDay').textContent = `Day: ${currentDate}`;
