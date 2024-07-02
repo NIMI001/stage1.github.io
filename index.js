@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const currentDate = `${days[now.getDay()]}, ${now.toLocaleDateString()}`;
         const currentTime = now.toUTCString().split(' ')[4];
 
-        document.getElementById('currentTimeUTC').textContent = `Time: ${currentTime}`;
+        document.getElementById('currentTimeUTC').textContent = `Time: ${currentTime}UTC`;
         document.getElementById('currentDay').textContent = `Day: ${currentDate}`;
     }
 
